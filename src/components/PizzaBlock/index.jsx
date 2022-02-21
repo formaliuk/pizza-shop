@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 
-const PizzaBlock = ({ name, imageUrl, price, types, sizes }) => {
+const Index = ({ name, imageUrl, price, types, sizes }) => {
   const [activeType, setActiveType] = useState(types[0]);
   const [activeSize, setActiveSize] = useState(sizes[0]);
 
@@ -74,7 +74,7 @@ const PizzaBlock = ({ name, imageUrl, price, types, sizes }) => {
   );
 };
 
-PizzaBlock.propTypes = {
+Index.propTypes = {
   name: PropTypes.string,
   imageUrl: PropTypes.string,
   price: PropTypes.number,
@@ -82,11 +82,11 @@ PizzaBlock.propTypes = {
   sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
 };
 
-PizzaBlock.defaultProps = {
+Index.defaultProps = {
   name: "---",
   price: 0,
   types: [],
   sizes: [],
 };
 
-export default PizzaBlock;
+export default Index;
