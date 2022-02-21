@@ -28,9 +28,8 @@ const HomePage = () => {
 
   const items = useSelector(({ pizzas }) => pizzas.items);
   const isLoaded = useSelector(({ pizzas }) => pizzas.isLoaded);
-  const { category, sortBy } = useSelector(({ filters }) => filters);
-
-  console.log(category, sortBy);
+  const category = useSelector(({ filters }) => filters.category);
+  const sortBy = useSelector(({ filters }) => filters.sortBy);
 
   useEffect(() => {
     dispatch(fetchPizzas());
