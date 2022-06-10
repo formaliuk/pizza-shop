@@ -11,17 +11,16 @@ import { fetchPizzas } from "../redux/actions/pizzas";
 import { addPizzaToCart } from "../redux/actions/cart";
 
 const categoryNames = [
-  "Мясные",
-  "Вегетарианские",
-  "Гриль",
-  "Острые",
-  "Закрытые",
+  "М'ясні",
+  "Вегетаріанські",
+  "Гострі",
+  "Новинки",
 ];
 
 const sortItems = [
-  { name: "популярности", type: "popular", order: "desc" },
-  { name: "цене", type: "price", order: "desc" },
-  { name: "алфавиту", type: "name", order: "asc" },
+  { name: "популярністю", type: "popular", order: "desc" },
+  { name: "ціною", type: "price", order: "desc" },
+  { name: "алфавітом", type: "name", order: "asc" },
 ];
 
 const HomePage = () => {
@@ -63,7 +62,7 @@ const HomePage = () => {
           onClickSortType={onSelectSortType}
         />
       </div>
-      <h2 className="content__title">Все пиццы</h2>
+      <h2 className="content__title">Всі піцци</h2>
       <div className="content__items">
         {isLoaded
           ? items.map((obj) => (

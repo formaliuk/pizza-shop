@@ -16,8 +16,8 @@ const PizzaBlock = ({
   const [activeType, setActiveType] = useState(types[0]);
   const [activeSize, setActiveSize] = useState(0);
 
-  const availableTypes = ["Тонкое", "Традиционное"];
-  const availableSizes = [26, 30, 45];
+  const availableTypes = ["Тонке", "Традиційне"];
+  const availableSizes = [30, 40, 50];
 
   const onSelectType = (index) => {
     setActiveType(index);
@@ -74,7 +74,7 @@ const PizzaBlock = ({
         </ul>
       </div>
       <div className="pizza-block__bottom">
-        <div className="pizza-block__price">от {price} ₴</div>
+        <div className="pizza-block__price">від {price} ₴</div>
         <Button onClick={onAddPizza} className="button--add" outline>
           <svg
             width="12"
@@ -88,7 +88,7 @@ const PizzaBlock = ({
               fill="white"
             />
           </svg>
-          <span>Добавить</span>
+          <span>Додати</span>
           {addedCount && <i>{addedCount}</i>}
         </Button>
       </div>
